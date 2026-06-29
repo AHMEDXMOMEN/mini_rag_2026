@@ -8,6 +8,7 @@ from routes import base
 
 app = FastAPI()
 
+#bastad3y el router ely ana 3ayzo mn el base.py w a7otoh fel app
 app.include_router(base.base_router)
 
 

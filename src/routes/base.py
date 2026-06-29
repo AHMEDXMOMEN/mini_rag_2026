@@ -4,6 +4,7 @@ from  fastapi import FastAPI, APIRouter
 # load_dotenv(".env")
 import os
 
+#blue / green loading of the api versioning
 base_router = APIRouter(
     prefix="/api/v1",
     tags=["api_v1"],
@@ -11,6 +12,7 @@ base_router = APIRouter(
 
 @base_router.get("/")
 async def welcome():
+    # ro7 lel os hat el env variables elly 3ayzha w 3mlha return
     app_name = os.getenv("APP_NAME", "app_name not found")
     app_version = os.getenv("APP_VERSION", "app_version not found")
     return {
